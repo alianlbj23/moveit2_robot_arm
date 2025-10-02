@@ -300,4 +300,62 @@
     <parent link="link4_v1_1"/>
     <child link="camera_1"/>
   </joint>
+
+  <!-- ROS2 Control -->
+  <ros2_control name="angle_excurate_arm_ver2" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+      <param name="mock_sensor_commands">false</param>
+      <param name="state_following_offset">0.0</param>
+    </hardware>
+    <joint name="Revolute 1">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">3.141593</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="Revolute 2">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">2.094395</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="Revolute 3">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">2.617994</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="Revolute 4">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">3.141593</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="Revolute 5">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">1.22173</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="Revolute 6">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">1.22173</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
 </robot>
